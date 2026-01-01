@@ -11,6 +11,8 @@ Original file is located at
 import yfinance as yf
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from hmmlearn.hmm import GaussianHMM
 from datetime import datetime
