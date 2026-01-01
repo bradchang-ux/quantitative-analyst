@@ -1,0 +1,7 @@
+pandas
+yfinance
+hmmlearn
+matplotlib
+pandas_market_calendars
+numpy
+openpyxl

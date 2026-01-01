@@ -1,0 +1,44 @@
+name: Daily Stock Analysis
+
+on:
+  schedule:
+    # 21:30 UTC = 16:30 EST (Winter) / 17:30 EDT (Summer)
+    # This ensures it always runs after NYSE close (16:00 ET)
+    - cron: '30 21 * * 1-5'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  run_analysis:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Need write permission to push CSV
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Analysis Script
+      # Using quotes for filename with spaces
+      run: python "Quantitative analyst.py"
+      env:
+        # Set timezone to US/Eastern for consistency if needed, 
+        # though the script handles TZ internally.
+        TZ: 'America/New_York' 
+
+    - name: Commit and Push History
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add history_data.csv
+        # Only commit if there are changes
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update daily stock history [skip ci]" && git push)
