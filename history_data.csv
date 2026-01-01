@@ -1,0 +1,13 @@
+Ticker,Last Close,HMM State,MA10 Gap,MA50 Gap,RSI,MACD > Signal,MACD Hist > 0,AI Suggestion,Date
+MSFT,$487.48,Bull (Low Vol),+0.63%,-1.86%,50.1,True,True,🟢 強多訊號：回測 MA50 + RSI 冷卻 + MACD 金叉或動能轉正。機構級買點強力浮現！,2025-12-31
+AAPL,$273.08,Bull (Low Vol),+0.04%,+0.25%,48.4,False,False,🟡 觀望階段：目前無高勝率交易優勢，建議空手或嚴守停損。,2025-12-31
+GOOGL,$313.85,Bull (Low Vol),+1.50%,+6.27%,58.0,False,False,🟡 觀望階段：目前無高勝率交易優勢，建議空手或嚴守停損。,2025-12-31
+NVDA,$187.54,Bull (Low Vol),+2.39%,+0.68%,54.8,True,True,🟢 強多訊號：回測 MA50 + RSI 冷卻 + MACD 金叉或動能轉正。機構級買點強力浮現！,2025-12-31
+TSLA,$454.43,Bull (Low Vol),-4.74%,+2.11%,48.5,False,False,🟡 觀望階段：目前無高勝率交易優勢，建議空手或嚴守停損。,2025-12-31
+TSM,$299.58,Bull (Low Vol),+2.25%,+2.62%,55.8,True,True,📈 強勢融漲階段：HMM 綠燈 + 站穩 MA10 + MACD 多頭排列。趨勢強勁，持倉為主。,2025-12-31
+META,$665.95,Bull (Low Vol),+0.72%,+1.69%,55.6,True,True,📈 強勢融漲階段：HMM 綠燈 + 站穩 MA10 + MACD 多頭排列。趨勢強勁，持倉為主。,2025-12-31
+AVGO,$349.85,Bull (Low Vol),+2.08%,-3.13%,45.9,False,False,🟡 觀望階段：目前無高勝率交易優勢，建議空手或嚴守停損。,2025-12-31
+ORCL,$197.21,Bull (Low Vol),+2.67%,-12.04%,44.0,True,True,📈 強勢融漲階段：HMM 綠燈 + 站穩 MA10 + MACD 多頭排列。趨勢強勁，持倉為主。,2025-12-31
+AMZN,$232.53,Bull (Low Vol),+1.63%,+0.60%,55.2,True,True,📈 強勢融漲階段：HMM 綠燈 + 站穩 MA10 + MACD 多頭排列。趨勢強勁，持倉為主。,2025-12-31
+MU,$292.63,Bull (Low Vol),+9.07%,+22.78%,68.4,True,True,📈 強勢融漲階段：HMM 綠燈 + 站穩 MA10 + MACD 多頭排列。趨勢強勁，持倉為主。,2025-12-31
+AMD,$215.34,Bull (Low Vol),+1.93%,-5.74%,48.9,True,True,📈 強勢融漲階段：HMM 綠燈 + 站穩 MA10 + MACD 多頭排列。趨勢強勁，持倉為主。,2025-12-31
