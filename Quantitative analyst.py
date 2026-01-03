@@ -15,7 +15,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from hmmlearn.hmm import GaussianHMM
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 import pytz
 import pandas_market_calendars as mcal
@@ -27,7 +27,8 @@ class Config:
     TICKERS = ["MSFT", "AAPL", "GOOGL", "NVDA", "TSLA", "TSM", "META", "AVGO", "ORCL", "AMZN", "MU", "AMD"]
 
     START_DATE = "2020-01-01"
-    END_DATE = datetime.now().strftime("%Y-%m-%d")
+    # yfinance end date is exclusive, so we add 1 day to include today
+    END_DATE = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
 
     HMM_COMPONENTS = 3
     SHORT_MA = 10
