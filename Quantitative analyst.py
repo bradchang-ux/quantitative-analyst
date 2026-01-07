@@ -146,19 +146,7 @@ def plot_dashboard(df, ticker, should_plot=True):
     print(f"   → MACD 在 Signal 上方: {macd_above_signal} | Histogram 正值: {hist_positive}")
     print("-" * 70)
 
-    ai_suggestion = ""
-    print("📢 【AI 分析師建議】 (MACD 邏輯優化版):")
-    if dist_to_ma10 < 0 and current_state > 0 and (recent_death or (not macd_above_signal and not hist_positive)):
-        ai_suggestion = "🔴 強空訊號：跌破 MA10 + HMM 轉弱 + MACD 死叉或動能轉負。適合佈局空單 (Short)。"
-    elif -2 < dist_to_ma50 < 3 and last_row['RSI'] < Config.RSI_RESET and (recent_golden or (macd_above_signal and hist_positive)):
-        ai_suggestion = "🟢 強多訊號：回測 MA50 + RSI 冷卻 + MACD 金叉或動能轉正。機構級買點強力浮現！"
-    elif current_state == 0 and dist_to_ma10 > 0 and macd_above_signal and hist_positive:
-        ai_suggestion = "📈 強勢融漲階段：HMM 綠燈 + 站穩 MA10 + MACD 多頭排列。趨勢強勁，持倉為主。"
-    elif dist_to_ma50 > 20:
-        ai_suggestion = "⚠️ 過熱警戒：距離 MA50 過遠，追高風險極大。建議等待回調。"
-    else:
-        ai_suggestion = "🟡 觀望階段：目前無高勝率交易優勢，建議空手或嚴守停損。"
-    print(ai_suggestion)
+
     print("="*70)
 
     # 繪圖：三子圖 (僅在 should_plot 為 True 時執行)
@@ -224,8 +212,8 @@ def plot_dashboard(df, ticker, should_plot=True):
         'MA50 Gap': f"{dist_to_ma50:+.2f}%",
         'RSI': f"{last_row['RSI']:.1f}",
         'MACD > Signal': macd_above_signal,
-        'MACD Hist > 0': hist_positive,
-        'AI Suggestion': ai_suggestion
+        'MACD Hist > 0': hist_positive
+
     }
 
 # ==========================================
